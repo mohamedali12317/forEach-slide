@@ -29,6 +29,10 @@
  color: var(--secondary-color);
 }
 
+.wrapper-2 ul li a:hover{
+    color: var(--main-color);
+   }
+
 .wrapper-2 ul li .active{
  color: var(--main-color);
 }
@@ -44,7 +48,7 @@
  left: 13px;
 }
 
-.wrapper-2 ul li a:hover:after {
+.wrapper-2 ul li a:hover::after {
  content: "";
  position: absolute;
  border-bottom: 2px solid var(--main-color);
