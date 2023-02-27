@@ -1,0 +1,134 @@
+/* fonts */
+
+.wrapper-2{
+ grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); 
+    display: grid;
+    padding-left: 0;
+    padding: 0;
+    position: relative;
+}
+
+.wrapper-2::before{
+ left: 162px;
+ content: "";
+ position: absolute;
+ border-bottom: 1px solid #333333;
+ width: calc(90% - 275px);
+ bottom: 0;
+
+}
+
+
+
+.wrapper-2 ul li {
+ margin: 0 -78px 0 -152px;
+ position: relative;
+}
+
+.wrapper-2 ul li a{
+ color: var(--secondary-color);
+}
+
+.wrapper-2 ul li .active{
+ color: var(--main-color);
+}
+
+.wrapper-2 ul li a.active::after {
+ content: "";
+ position: absolute;
+ border-bottom: 2px solid var(--main-color);
+ bottom: -17px;
+ transform: translate(-50%, -50%);
+ width: 25px;
+ z-index: 2;
+ left: 13px;
+}
+
+.wrapper-2 ul li a:hover:after {
+ content: "";
+ position: absolute;
+ border-bottom: 2px solid var(--main-color);
+ bottom: -17px;
+ transform: translate(-50%, -50%);
+ width: 25px;
+ z-index: 2;
+ left: 13px;
+}
+
+@media (max-width: 991px) {
+ .wrapper-2::before{
+  width: calc(90% - 229px);
+  left: 114px;
+ }
+}
+
+@media (max-width: 651px) {
+ .wrapper-2::before{
+  transform: translateX(-50%);
+  min-width: calc(90% - 229px);
+  left: 284px;
+ }
+}
+
+@media (max-width: 651px) {
+ .wrapper-2::before{
+  transform: translateX(-50%);
+  min-width: calc(90% - 229px);
+  left: 284px;
+ }
+
+ ul::before{
+  left: 162px;
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #333333;
+  width: calc(90% - 275px);
+  bottom: 0;
+ 
+ }
+
+}
+
+@media (max-width: 620px) {
+ ul::before{
+  left: 101px;
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #333333;
+  width: 46%;
+  bottom: 0;
+ }
+}
+
+@media (max-width: 546px) {
+ .wrapper-2::before{
+  transform: translateX(-50%);
+  min-width: calc(90% - 229px);
+  left: 302px;
+ }
+}
+
+@media (max-width: 511px) {
+ .wrapper-2::before{
+  transform: translateX(-50%);
+  min-width: calc(90% - 229px);
+  left: 329px;
+ }
+}
+
+@media (max-width: 458px) {
+ .wrapper-2::before{
+  transform: translateX(-50%);
+  min-width: calc(90% - 229px);
+  left: 349px;
+ }
+}
+
+@media (max-width: 405px) {
+ .wrapper-2::before{
+  transform: translateX(-50%);
+  min-width: 46%;
+  left: 344px;
+
+ }
+}

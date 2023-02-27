@@ -1,0 +1,513 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+ /* this for contect in the center like frist project */
+  --main-color: #54B3A1;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --content-margin: 100px;
+  --p-with-background-color: #777;
+  --main-gap:30px;
+ 
+ }
+ 
+ /* start for basic */
+ 
+ * {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     padding: 0;
+     outline: none;
+ }
+ 
+ body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  /* user-select:none; */
+ }
+ 
+ html{
+  scroll-behavior: smooth;
+ }
+ 
+ *:focus {
+  outline: none;
+ }
+ a {
+  text-decoration: none;
+ }
+ ul {
+  list-style: none;
+  padding: 0;
+ }
+ 
+ ::before , ::after {
+  box-sizing: border-box;
+ }
+ 
+ /* end for basic */
+ 
+ /* start for scroll */
+ 
+    /* ::-webkit-scrollbar {
+     width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+     background-color: white;
+    }
+    ::-webkit-scrollbar-thumb {
+     background-color: var(--blue-color);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+     background-color: var(--blue-alt-color);
+   } */
+ 
+ /* end for scroll */
+ 
+ /* the way to use grid */
+ 
+ .wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* 1fr انا بقلو يبداء معايا لحد 450 لحد ما يوصل الى 
+    انا لسة واخد بالى من حاجة ان 450 بترجع على كل عنصر مش لزم الى هو اول صف انا كنت فاكر كدة فا طلع لا 
+    يعنى انا لو عملت 
+    repeat(auto-fill, minmax(352px, 1fr)) انا كدة هخالى 3 اعمدة يكونو جنب ب
+  */ 
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+ }
+ @media (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: minmax(200px, 1fr); /*انا مش عايز ربيت عايزو يبداء من 200*/
+    /* grid-template-columns: repeat(auto-fill, minmax(305px, 1fr)); دى انا ممكن اعملها تاخد 2 جنب عادى انا فهمت الدنيا  */
+    /* grid-template-columns: repeat(auto-fill, minmax(621px, 1fr)); دا لو انا عايز اعمل صف واحد اهو  */
+    margin-left: 10px; /*عشان الموبايل مفهوش مكان فا دا رقم كويس*/
+    margin-right: 10px;
+    gap: 10px;
+  }
+ }
+ 
+ /*
+   i can use it for prodcat in the middle like frist templte
+   grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+  */
+ 
+ /* end grid */
+ 
+ /* Start Box */
+ .d-flex {
+  display: flex;
+ }
+ .f-wrap {
+  flex-wrap: wrap;
+ }
+ .align-center {
+  align-items: center;
+ }
+ .space-between {
+  justify-content: space-between;
+ }
+ .d-grid {
+  display: grid;
+ }
+ .gap-20 {
+  gap: 20px;
+ }
+ .d-block {
+  display: block;
+ }
+ @media (max-width: 767px) {
+  .block-mobile {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
+ }
+ /* End Box */
+ /* Start Padding + Margin */
+ .p-10 {
+  padding: 10px;
+ }
+ .p-15 {
+  padding: 15px;
+ }
+ .p-20 {
+  padding: 20px;
+ }
+ .pt-10 {
+  padding-top: 10px;
+ }
+ .pt-15 {
+  padding-top: 15px;
+ }
+ .pt-20 {
+  padding-top: 20px;
+ }
+ .pb-10 {
+  padding-bottom: 10px;
+ }
+ .pb-15 {
+  padding-bottom: 15px;
+ }
+ .pb-20 {
+  padding-bottom: 20px;
+ }
+ .pl-15 {
+  padding-left: 15px;
+ }
+ .m-0 {
+  margin: 0;
+ }
+ .m-15 {
+  margin: 15px;
+ }
+ .m-20 {
+  margin: 20px;
+ }
+ .mt-0 {
+  margin-top: 0;
+ }
+ .mt-5 {
+  margin-top: 5px;
+ }
+ .mt-10 {
+  margin-top: 10px;
+ }
+ .mt-15 {
+  margin-top: 15px;
+ }
+ .mt-20 {
+  margin-top: 20px;
+ }
+ .mt-25 {
+  margin-top: 25px;
+ }
+ .mr-10 {
+  margin-right: 10px;
+ }
+ .mr-15 {
+  margin-right: 15px;
+ }
+ .mb-5 {
+  margin-bottom: 5px;
+ }
+ .mb-10 {
+  margin-bottom: 10px;
+ }
+ .mb-15 {
+  margin-bottom: 15px;
+ }
+ .mb-20 {
+  margin-bottom: 20px;
+ }
+ .mb-25 {
+  margin-bottom: 25px;
+ }
+ /* End Padding + Margin */
+ /* Start Color */
+ .c-black {
+  color: black;
+ }
+ .c-white {
+  color: white;
+ }
+ .c-grey {
+  color: var(--grey-color);
+ }
+ .c-red {
+  color: var(--red-color);
+ }
+ .c-green {
+  color: var(--green-color);
+ }
+ .c-blue {
+  color: var(--blue-color);
+ }
+ .c-orange {
+  color: var(--orange-color);
+ }
+ .bg-red {
+  background-color: var(--red-color);
+ }
+ .bg-green {
+  background-color: var(--green-color);
+ }
+ .bg-blue {
+  background-color: var(--blue-color);
+ }
+ .bg-orange {
+  background-color: var(--orange-color);
+ }
+ .bg-white {
+  background-color: white;
+ }
+ .bg-eee {
+  background-color: #eee;
+ }
+ /* End Color */
+ /* Start Position */
+ .p-relative {
+  position: relative;
+ }
+ .p-absolute {
+  position: absolute;
+ }
+ /* End Position */
+ /* Start Font */
+ .txt-c {
+  text-align: center;
+ }
+ .fs-13 {
+  font-size: 13px;
+ }
+ .fs-14 {
+  font-size: 14px;
+ }
+ .fs-15 {
+  font-size: 15px;
+ }
+ .fs-25 {
+  font-size: 25px;
+ }
+ .fw-bold {
+  font-weight: bold;
+ }
+ @media (max-width: 767px) {
+  .txt-c-mobile {
+    text-align: center;
+  }
+ }
+ /* End Font */
+ /* Start Border */
+ .rad-6 {
+  border-radius: 6px;
+ }
+ .rad-10 {
+  border-radius: 10px;
+ }
+ .rad-half {
+  border-radius: 50%;
+ }
+ .b-none {
+  border: none;
+ }
+ .border-ccc {
+  border: 1px solid #ccc;
+ }
+ .border-eee {
+  border: 1px solid #eee;
+ }
+ 
+ /* End Border */
+ /* Start Width + Height */
+ 
+ .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ 
+ .w-full {
+  width: 100%;
+ }
+ .w-100 {
+  width: 100px;
+ }
+ .w-fit {
+  width: fit-content;
+ }
+ .h-full {
+  height: 100%;
+ }
+ .h-100 {
+  height: 100px;
+ }
+ 
+ /* Small */
+ 
+ @media (min-width: 768px) {
+  .container{
+      width: 750px;
+  }
+ } 
+ 
+ /* Medium */
+ @media (min-width: 992px) {
+  .container{
+      width: 970px;
+  }
+ }
+ 
+ /* Large */
+ @media (min-width: 1200px) {
+  .container{
+      width: 1170px;
+  }
+ }
+ 
+ 
+ /* End Width + Height */
+ 
+ /* start width bootstrap */
+ 
+ .width-1-column-12 {
+  width: 8.3333333333%;
+ }
+ 
+ .width-2-column-12 {
+  width: 16.6666666667%;
+ }
+ 
+ .width-3-column-12 {
+  width: 25%;
+ }
+ 
+ .width-4-column-12 {
+  width: 33.3333333333%;
+ }
+ 
+ .width-5-column-12 {
+  width: 41.6666666667%;
+ }
+ 
+ .width-6-column-12 {
+  width: 50%;
+ }
+ 
+ .width-7-column-12 {
+  width: 58.3333333333%;
+ }
+ 
+ .width-8-column-12 {
+  width: 66.6666666667%;
+ }
+ 
+ .width-9-column-12 {
+  width: 75%;
+ }
+ 
+ .width-10-column-12 {
+  width: 83.3333333333%;
+ }
+ 
+ .width-11-column-12 {
+  width: 91.6666666667%;
+ }
+ 
+ .width-1 {
+  width: 9.0909090909%;
+ }
+ 
+ .width-2 {
+  width: 18.1818181818%;
+ }
+ 
+ .width-3 {
+  width: 27.2727272727%;
+ }
+ 
+ .width-4 {
+  width: 36.3636363636%;
+ }
+ 
+ .width-5 {
+  width: 45.4545454545%;
+ }
+ 
+ .width-6 {
+  width: 54.5454545455%;
+ }
+ 
+ .width-7 {
+  width: 63.6363636364%;
+ }
+ 
+ .width-8 {
+  width: 72.7272727273%;
+ }
+ 
+ .width-9 {
+  width: 81.8181818182%;
+ }
+ 
+ .width-10 {
+  width: 90.9090909091%;
+ }
+ 
+ .width-1-column-3 {
+  width: 33.3333333333%;
+ }
+ 
+ .width-2-column-3 {
+  width: 66.6666666667%;
+ }
+ 
+ /* end width bootstrap */
+ 
+ /* Start Components */
+ .center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ 
+ .evenly-flex {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+  }
+ 
+ .btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
+ }
+ /* End Components */
+ 
+ /* start img */
+ 
+ .img-full {
+  vertical-align: middle;
+  max-width: 100%;
+ }
+ 
+ /* end img */
+ 
+ /* start text */
+ 
+ .capitalize{
+  text-transform: capitalize;
+ }
+ 
+ /* end text */
+ 
+ /* start transform */
+ .translate-x-50 {
+   transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
+ }
+ .translate-y-50 {
+   transform:translate-y(-50%);
+   -webkit-transform:translate-y(-50%);
+   -moz-transform:translate-y(-50%);
+   -ms-transform:translate-y(-50%);
+   -o-transform:translate-y(-50%);
+ }
+ /* end transform */
+ 
